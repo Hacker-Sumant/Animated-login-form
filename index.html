@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login Form Design</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  <div id="view" data-mode="light"
+    onclick="changeMode(this)">
+    <i class="fa fa-moon"></i>
+  </div>
+  <div class="wrapper">
+    <div class="title">Login Form</div>
+    <form action="#">
+      <div class="field">
+        <input type="text" required>
+        <label>Username</label>
+      </div>
+      <div class="field">
+        <input type="text" required>
+        <label>Email Address</label>
+      </div>
+      <div class="field">
+        <input type="number" required>
+        <label>Phone Number</label>
+      </div>
+      <div class="field">
+        <input type="text" required>
+        <label>Password</label>
+      </div>
+      <div class="field">
+        <input type="password" required>
+        <label>Confirm Password</label>
+      </div>
+      <div class="field">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+  </div>
+  <script>
+    function changeMode(themeobj) {
+      if (themeobj.dataset.mode == "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+        themeobj.dataset.mode = "dark";
+
+      } else {
+        document.documentElement.setAttribute("data-theme", " dark");
+        themeobj.dataset.mode = "light";
+      }
+    }
+  </script>
+</body>
+
+</html>
